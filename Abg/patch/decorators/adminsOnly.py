@@ -17,7 +17,7 @@ ANON = TTLCache(maxsize=250, ttl=30)
 
 # ENV
 try:
-    OWNER_ID = int(os.environ.get("OWNER_ID"))
+    OWNER_ID = int(os.environ.get("OWNER_ID", None )
 except ValueError:
     raise Exception("Your OWNER_ID env variable is not a valid integer.")
 
